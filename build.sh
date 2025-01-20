@@ -9,7 +9,7 @@ cd sentry-native
 git submodule update --init --recursive
 
 # Build with CMake
-cmake -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo
+cmake -B build -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_BUILD_TYPE=RelWithDebInfo
 cmake --build build --config RelWithDebInfo --parallel
 cmake --install build --prefix install --config RelWithDebInfo
 
